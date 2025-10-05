@@ -2,12 +2,12 @@
 
 A responsive React application to browse and explore companies with detailed information. Built with modern React ecosystem tools including Redux Toolkit, React Router, Tailwind CSS, and Axios, this project demonstrates a clean and interactive UI with proper state management and API handling.
 
----
+<!-- ---
 ## 🌐 Live Demo
 
 Check out the live application here: [Companies Directory Live](https://gjlp-companies-directory.netlify.app)  
 
----
+--- -->
 
 ## 🛠 Technologies Used
 
