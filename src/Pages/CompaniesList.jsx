@@ -12,8 +12,12 @@ function CompanyList(){
   const [search, setSearch] = useState("");
   // for sort dropdown
   const [sort, setSort] = useState("name");
+
   // initial page state
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(() => {
+    return Number(localStorage.getItem("currentPage")) || 1;
+  });
+
   const itemsPerPage = 10;
 
 
@@ -21,6 +25,13 @@ function CompanyList(){
     // calling fetch fn through redux
     dispatch(fetchCompanies());
   }, [dispatch]);
+
+
+  // Update localStorage whenever currentPage changes
+  useEffect(() => {
+    localStorage.setItem("currentPage", JSON.stringify(currentPage));
+  }, [currentPage]);
+
 
   // it will filter data through search and sort values  by (loc , name, industry)
 
